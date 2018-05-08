@@ -1,0 +1,208 @@
+/****************************
+    Global Styling
+ ****************************/
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #111;
+  background: #edeff0;
+  background-image: url(svgs/background.svg);
+}
+
+p {
+  max-width: 350px;
+  margin: 35px auto 0;
+  line-height: 2em;
+  text-align: left;
+}
+
+a svg {
+  padding: 0 8px;
+}
+
+header {
+  padding-top: 10px;
+}
+
+main {
+  padding-top: 50px;
+}
+
+main h2 {
+  font-size: 28px;
+}
+
+footer {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  color: #ba8058;
+}
+
+#container {
+  max-width: 960px;
+  background: #fff;
+  margin: 0 auto;
+  height: 100%; /* new line */
+}
+
+/****************************
+      Nav Styling
+ ****************************/
+
+ header nav {
+   padding-bottom: 50px;
+   text-align: left;
+ }
+
+ header nav ul li {
+   display: inline-block;
+   margin-right: 20px;
+ }
+
+ a {
+   text-decoration: none;
+   color: #39add1;
+   font-weight: 700;
+   transition: .5s;
+ }
+
+ .nav-svg {
+   height: 15px;
+   width: 15px;
+ }
+
+/****************************
+      Logo Styling
+ ****************************/
+
+ .st1 {
+   display: none;
+ }
+
+ .st2 {
+   animation: paw 1s;
+   animation-delay: 1s;
+   transform-origin: 50% 50%;
+ }
+
+ .st3 {
+   transition: all .5s ease-out;
+   transform-origin: 50% 50%;
+ }
+
+ .logo {
+   animation: logo 1s ease-out;
+   height: 140px;
+   width: 120px;
+ }
+
+ .title {
+  display: block;
+  color:#BA8058;
+ }
+
+/****************************
+         Dogs Styling
+ ****************************/
+
+.corgi {
+  display: flex;
+  flex-direction: column;
+}
+
+.corgi li {
+  width: 170px;
+  list-style: none;
+  margin: auto;
+}
+
+.sable  {
+  fill: #B18161;
+}
+
+.fawn {
+  fill: #E1AC88;
+}
+
+.red {
+  fill: #7C4D30;
+}
+
+.stone {
+  fill: #53595D;
+}
+
+span {
+color: #ba8056;
+padding-right: 42px;
+margin-top: 10px;
+}
+
+/****************************
+         Keyframes
+ ****************************/
+
+@keyframes logo {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes paw {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/****************************
+      Media Queries
+ ****************************/
+
+
+@media (min-width: 425px) {
+
+    .st1 {
+      display: block;
+    }
+
+    .title {
+      display: none;
+    }
+
+    .corgi{
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+      margin: auto;
+    }
+
+    .nav:hover .st3 {
+      fill: #7C4D30;
+      transform: rotate(25deg);
+    }
+
+     a:hover {
+      cursor: pointer;
+      color: #7C4D30;
+    }
+
+}
